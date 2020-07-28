@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+</head><!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com	/bootstrap/4.3.1/css/bootstrap.min.css">
+
+   <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/latest/css/bootstrap.css" />
+    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+
+  <script src="moment.min.js"></script>
+  <script src="daterangepicker.js"></script>
+</head>
+<body>
+
+<div class="container-fluid" align="center" style="background-color:gray" >
+  <h1>Welcome To Weather BroadCasting</h1>
+  <p>We Report people about recent weather conditions</p>
+
+  <hr color="white" border-style="solid" ><div class="row"><div class="col-md-3"><a href="http://127.0.0.1:8000/entry" class="button" style="background-color:yellow"style="text-color:red;"
+>Enter Data</a></div><div class="col-md-3 bg-white">{{obj.Date}}</div><pre>   </pre><div class="col-md-3 bg-white">{{obj.Time}}</div></div><hr color="white" border-style="solid">
+  <div class="container"align="center" >
+    <!-- Control the column width, and how they should appear on different devices -->
+    <div class="row">
+      <div class="col-sm" style="background-color:grey;">
+      	<div class="container">
+		   <div class="card-deck rounded"style="width:100%">
+		    <div class="card bg-white rounded">
+		      <div class="card-title text-center">
+		        <strong>Parameter 1</strong>
+		        <p class="card-body text-center">{{obj.parameter1}}</p>
+
+		      </div>
+		    </div>
+		    <div class="card bg-white rounded">
+		      <div class="card-title text-center">
+		        <strong>Parameter 2</strong>
+		        <p class="card-body text-center">{{obj.parameter2}}</p>
+
+		      </div>
+		    </div>
+		    <div class="card bg-white rounded">
+		      <div class="card-title text-center">
+		        <strong>Parameter 3</strong>
+		        <p class="card-body text-center">{{obj.parameter3}}</p>
+
+		      </div>
+		    </div>
+
+		  </div>
+		</div>
+
+      </div>
+    </div>
+    <br>
+
+    <div class="row">
+      <div class="col-sm" style="background-color:grey;">
+      	<div class="container">
+		   <div class="card-deck rounded"style="width:100%">
+		    <div class="card bg-white rounded">
+		      <div class="card-title text-center">
+		        <strong>Parameter 4</strong>
+		        <p class="card-body text-center">{{obj.parameter4}}</p>
+
+		      </div>
+		    </div>
+		    <div class="card bg-white rounded">
+		      <div class="card-title text-center">
+		        <strong>Parameter 5</strong>
+		        <p class="card-body text-center">{{obj.parameter5}}</p>
+
+		      </div>
+		    </div>
+		    <div class="card bg-white rounded">
+		      <div class="card-title text-center">
+		        <strong>Parameter 6</strong>
+		        <p class="card-body text-center">{{obj.parameter6}}</p>
+
+		      </div>
+		    </div>
+
+		  </div>
+		</div>
+
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm" style="background-color:grey;">
+      	<div class="container">
+		   <div class="card-deck rounded" style="width:100%">
+		    <div class="card bg-white rounded">
+		      <div class="card-title text-center">
+		        <strong>Parameter 7</strong>
+		        <p class="card-body text-center">{{obj.parameter7}}</p>
+
+		      </div>
+		    </div>
+		    <div class="card bg-white rounded">
+		      <div class="card-title text-center">
+		        <strong>Parameter 8</strong>
+		        <p class="card-body text-center">{{obj.parameter8}}</p>
+
+		      </div>
+		    </div>
+		    <div class="card bg-white rounded">
+		      <div class="card-title text-center">
+		        <strong>Reports</strong>
+		        <p class="card-body text-center">
+
+    <form method="post" action="response">
+        {% csrf_token %}
+		<div class="row">
+			<div class="col-md-3">    <a>From :-  </a></div>
+				<div class="col-md-8"><input type="Date" name="srh" style="font-size:14px;width:100%" class="form-control"></input></div><br>
+				</div>
+				<div class="row">
+					<div class="col-md-3"><a>To :-  </a></div>
+						<div class="col-md-8"><input type="Date"name="mi" style="font-size:14px;width:100%" class="form-control"></input></div>
+    					</div><br>
+				  		<div class="row">
+							<div class="col-md-4"></div>
+								<div class="col-md-4"><button type="submit" onclick="Myfun()">Submit</button>
+								</div>
+						</div>
+			  </form>
+				  <script>
+function Myfun()
+{
+	location.replace("http://127.0.0.1:8000/mazya")
+}
+</script>
+			  </div>
+			</div>
+		   </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+</div>
+</body>
+</head>
+</html>
