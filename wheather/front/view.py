@@ -22,8 +22,9 @@ para8_max=100
 msg=' '
 
 def search(request):
+        msg=''
         obj = Test.objects.last()
-        msg =''
+        
         if int(obj.parameter1) > int(para1_max):
             msg += 'parameter1 increased to ' + obj.parameter1 + '\n'
         elif int(obj.parameter1) < int(para1_min):
